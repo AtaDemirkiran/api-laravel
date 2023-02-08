@@ -19,8 +19,6 @@ class ItemController extends Controller
     {
         $items=Item::all(); 
         
-        
-
         return $items;
     
     }

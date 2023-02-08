@@ -90,4 +90,21 @@ class ProductController extends Controller
         $product->delete();
 
     }
+
+
+     /**
+     * Search Product
+     *
+     * @param  string  $name
+     * @return \Illuminate\Http\Response
+     */
+
+    public function search($name)
+    {
+
+        return $product=Product::where('name','like','%'.$name.'%')->get();
+ 
+        
+    }
+
 }
